@@ -1,0 +1,15 @@
+  
+<div class="card text-left">
+  <div class="card-body">
+    <h3 class="text-center">Add Data</h3>
+    <hr>
+    <form [formGroup]="AddForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Title <sup class="text-danger">*</sup></label>
+          <input type="text" class="form-control" formControlName="title">
+          <div *ngIf="f1['title'].errors?.['required'] && submit" class="text-danger">Title is requird</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+</div>
